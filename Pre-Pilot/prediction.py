@@ -69,9 +69,7 @@ if __name__=="__main__":
 	# setup Spark
 	conf = (SparkConf()
 		.setMaster(cfg.SYS.SPARK_MASTER)
-		.set("spark.app.name","NIST Pre-Pilot Prediction Task")
-		.set("spark.executor.memory", "24g")
-		.set("spark.driver.maxResultSize","24g"))
+		.set("spark.app.name","NIST Pre-Pilot Prediction Task"))
 	sc = SparkContext(conf = conf)
 	
 	# verify files
